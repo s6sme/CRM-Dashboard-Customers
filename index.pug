@@ -1,0 +1,140 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Dashboard
+    link(rel="stylesheet" href="style.css")
+    script(src="index.js" defer)
+  body
+    .dashboard
+      aside.sidebar
+        .sidebar__logo
+          span.logo__title Dashboard
+          span.logo__version v.01
+
+        ul.sidebar__menu
+          li.sidebar__item
+            a.sidebar__link(href="#")
+              span.icon 🏠 Dashboard
+          li.sidebar__item
+            a.sidebar__link(href="#")
+              span.icon 📦 Product
+              span.icon_right → 
+          li.sidebar__item.sidebar__item--active
+            a.sidebar__link.sidebar__link--active(href="#")
+              span.icon 👥 Customers
+              span.icon_right → 
+          li.sidebar__item
+            a.sidebar__link(href="#")
+              span.icon 💵 Income
+              span.icon_right → 
+          li.sidebar__item
+            a.sidebar__link(href="#")
+              span.icon 📢 Promote
+              span.icon_right → 
+          li.sidebar__item
+            a.sidebar__link(href="#")
+              span.icon ❓ Help
+              span.icon_right → 
+
+        .sidebar__profile
+          img.profile__avatar(src="image.jpg", alt="Evano")
+          div
+            span.profile__name Evano
+            br
+            span.profile__role Project Manager
+
+      main.content
+        header.content__header.fade-in
+          button.toggle-sidebar ☰
+          h1.content__title Hello Evano 👋,
+
+        section.customers.fade-in
+          .customers__table
+            .customers__header
+              div
+                h2.customers__title All Customers
+                p.customers__subtitle Active Members
+
+              .search
+                input.search__input(type="text", placeholder="🔍 Search")
+
+            table
+              thead
+                tr
+                  th Customer Name
+                  th Company
+                  th Phone Number
+                  th Email
+                  th Country
+                  th Status
+              tbody
+                tr
+                  td Jane Cooper
+                  td Microsoft
+                  td (225) 555-0118
+                  td jane@microsoft.com
+                  td United States
+                  td.status.status--active Active
+                tr
+                  td Floyd Miles
+                  td Yahoo
+                  td (205) 555-0100
+                  td floyd@yahoo.com
+                  td Kiribati
+                  td.status.status--inactive Inactive
+                tr
+                  td Ronald Richards
+                  td Adobe
+                  td (302) 555-0107
+                  td ronald@adobe.com
+                  td Israel
+                  td.status.status--inactive Inactive
+                tr
+                  td Marvin McKinney
+                  td Tesla
+                  td (252) 555-0126
+                  td marvin@tesla.com
+                  td Iran
+                  td.status.status--active Active
+                tr
+                  td Jerome Bell
+                  td Google
+                  td (629) 555-0129
+                  td jerome@google.com
+                  td Réunion
+                  td.status.status--active Active
+                tr
+                  td Kathryn Murphy
+                  td Microsoft
+                  td (406) 555-0120
+                  td kathryn@microsoft.com
+                  td Curacao
+                  td.status.status--active Active
+                tr
+                  td Jacob Jones
+                  td Yahoo
+                  td (208) 555-0112
+                  td jacob@yahoo.com
+                  td Brazil
+                  td.status.status--active Active
+                tr
+                  td Kristin Watson
+                  td Facebook
+                  td (704) 555-0127
+                  td kristin@facebook.com
+                  td Åland Islands
+                  td.status.status--inactive Inactive
+
+            .customers__footer
+              span.customers__info Showing data 1 to 8 of 256K entries
+              .pagination
+                a.pagination__link(href="#") &larr;
+                a.pagination__link.pagination__link--active(href="#") 1
+                a.pagination__link(href="#") 2
+                a.pagination__link(href="#") 3
+                a.pagination__link(href="#") 4
+                a.pagination__link(href="#") ...
+                a.pagination__link(href="#") 40
+                a.pagination__link(href="#") &rarr;
